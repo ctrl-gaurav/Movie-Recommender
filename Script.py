@@ -61,7 +61,5 @@ def recommendations(str):
         # print("enter valid movie name")
         return 0
 
-
-
 # str = input("enter movie name : ")
 # print(recommendations(str))
