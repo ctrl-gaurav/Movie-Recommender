@@ -25,14 +25,12 @@
             <button type="submit">Get Recommendation</button>
         </div>
     </form>
-   
-    <div class="error">{{error}}</div>
-
     <ul class="movies">
         {% for movie in movies %}
         <li>{{movie}}</li>
         {% endfor %}
     </ul>
+    <div class="error">{{error}}</div>
 
 </body>
 

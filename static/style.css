@@ -6,15 +6,15 @@ body {
 }
 
 .Heading {
-  text-decoration: wavy 2px pink;
+  text-decoration:none;
   font-size: 3em;
-  margin: 10% 0 0 0;
+  margin: 7% 0 0 0;
 }
 
 .heading a:-webkit-any-link,
 a:any-link {
   text-decoration: none;
-  color: plum;
+  color: #8155BA;
 }
 
 .movieForm {
@@ -22,7 +22,7 @@ a:any-link {
 }
 
 .movieForm input {
-  border: 2px solid turquoise;
+  border: 2px solid #BEAFC2;
   border-radius: 30px;
   height: 36px;
   width: 40%;
@@ -35,17 +35,13 @@ a:any-link {
   background-color: #9088d4;
   color: #ebcfc4;
   border: 2px solid #556052;
-  border-radius: 2px;
-  padding: 10px 10px;
-  font-family: monospace;
-  letter-spacing: 3px;
+  border-radius: 30px;
   height: 40px;
   transition: all 0.18s;
 }
 
 .movieForm button:hover {
   color: white;
-  /* border: 2px solid black ; */
   box-shadow: 0 0.5em 0.5em -0.4em darkslateblue;
   transform: translateY(-0.15em);
   cursor: pointer;
@@ -53,7 +49,7 @@ a:any-link {
 
 .movies {
   padding: 0;
-  margin-top: 1%;
+  top: 100px ;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -62,7 +58,9 @@ a:any-link {
 
 .movies li {
   list-style: none;
-  font-size: 1.3em;
+  font-size: 1.5em;
+  font-weight: 800;
+  color: #26192c;
   /* border: 2px solid black ; */
   width: 30%;
   margin: 1% 0;
@@ -70,7 +68,7 @@ a:any-link {
 }
 
 .error {
-  margin: 5% 0 0 0 ;
+  margin: 2% 0 0 0 ;
   font-size: 2.5em;
   color:#556052 ;
 }
