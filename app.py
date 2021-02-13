@@ -14,7 +14,10 @@ def submit():
         movielist = recommendations(str['movie_name'])
         return render_template('index.html', movies = movielist )
 
+    # else if 
+    #     return render_template('index.html', error = "Cannot find movie")
+    
     return render_template('index.html')
     
 if __name__ == '__main__':
-    app.run()
+    app.run(debug=True)
