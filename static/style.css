@@ -14,7 +14,7 @@ body {
 .heading a:-webkit-any-link,
 a:any-link {
   text-decoration: none;
-  color: plum ;
+  color: plum;
 }
 
 .movieForm {
@@ -32,6 +32,23 @@ a:any-link {
 
 .movieForm button {
   margin: 1.2% 0 0 0;
+  background-color: #9088d4;
+  color: #ebcfc4;
+  border: 2px solid #556052;
+  border-radius: 2px;
+  padding: 10px 10px;
+  font-family: monospace;
+  letter-spacing: 3px;
+  height: 40px;
+  transition: all 0.18s;
+}
+
+.movieForm button:hover {
+  color: white;
+  /* border: 2px solid black ; */
+  box-shadow: 0 0.5em 0.5em -0.4em darkslateblue;
+  transform: translateY(-0.15em);
+  cursor: pointer;
 }
 
 .movies {
@@ -53,5 +70,7 @@ a:any-link {
 }
 
 .error {
-  font-size: 1.8em;
+  margin: 5% 0 0 0 ;
+  font-size: 2.5em;
+  color:#556052 ;
 }
