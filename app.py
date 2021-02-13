@@ -11,8 +11,11 @@ def home():
 def submit():  
     if request.method == 'POST':
         str = request.form
-        movielist = recommendations(str['movie_name'])
-        return render_template('index.html', movies = movielist )
+        try:
+            movielist = recommendations(str['movie_name'])
+            return render_template('index.html', movies = movielist )
+        except:
+            return render_template('index.html', error = "An Error Occured please try again" )
 
     # else if 
     #     return render_template('index.html', error = "Cannot find movie")
