@@ -54,9 +54,9 @@ def generate_rec_movies(title, sig=sig):
 
 # Get array of recommended movies 
 def recommendations(str):
-    movies=[np.array(generate_rec_movies(str))]
+    movies=np.array(generate_rec_movies(str))
     return movies
 
 
-str = input("enter movie name : ")
-print(recommendations(str))
+# str = input("enter movie name : ")
+# print(recommendations(str))
