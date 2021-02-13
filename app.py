@@ -15,7 +15,7 @@ def submit():
             movielist = recommendations(str['movie_name'])
             return render_template('index.html', movies = movielist )
         except:
-            return render_template('index.html', error = "An Error Occured please try again" )
+            return render_template('index.html', error = "Please Enter a Valid Movie Name" )
 
     # else if 
     #     return render_template('index.html', error = "Cannot find movie")
