@@ -43,7 +43,7 @@ def generate_rec_movies(title, sig=sig):
     sig_scores = sorted(sig_scores, key=lambda x: x[1], reverse=True)
 
     # Scores of the 10 most similar movies
-    sig_scores = sig_scores[1:11]
+    sig_scores = sig_scores[1:10]
 
     # Movie indices
     movie_indices = [i[0] for i in sig_scores]

@@ -7,17 +7,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
 
     <title>Movie Recommender</title>
+
 </head>
 
 <body>
-    <h1>MOVIE RECOMMENDER</h1>
-    <form action="\submit" method="POST">
-        <input type="text" name="movie_name" placeholder="Movie Name" required />
-        <input type="submit" name="submit" value="Get Recommendation">
-    </form>
+    <div class="Heading"><a href="\">MOVIE RECOMMENDER</a></div>
 
+    <form class="movieForm" action="\submit" method="POST">
+        <div>
+            <input type="text" name="movie_name" placeholder="Movie Name" required />
+        </div>
+        <div>
+            <button type="submit">Get Recommendation</button>
+        </div>
+    </form>
+   
     <div class="error">{{error}}</div>
 
     <ul class="movies">

@@ -1,5 +1,57 @@
-body{
-    align-items: center ;
-    text-align: center;
-    margin-top: 10%;
+body {
+  margin: 0;
+  font-family: "Open Sans Condensed", sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.Heading {
+  text-decoration: wavy 2px pink;
+  font-size: 3em;
+  margin: 10% 0 0 0;
+}
+
+.heading a:-webkit-any-link,
+a:any-link {
+  text-decoration: none;
+  color: plum ;
+}
+
+.movieForm {
+  margin-top: 2%;
+}
+
+.movieForm input {
+  border: 2px solid turquoise;
+  border-radius: 30px;
+  height: 36px;
+  width: 40%;
+  text-align: center;
+  outline: none;
+}
+
+.movieForm button {
+  margin: 1.2% 0 0 0;
+}
+
+.movies {
+  padding: 0;
+  margin-top: 1%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.movies li {
+  list-style: none;
+  font-size: 1.3em;
+  /* border: 2px solid black ; */
+  width: 30%;
+  margin: 1% 0;
+  justify-content: center;
+}
+
+.error {
+  font-size: 1.8em;
 }
