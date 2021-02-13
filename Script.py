@@ -29,7 +29,7 @@ sig = sigmoid_kernel(tfv_matrix, tfv_matrix)
 
 
 # Reverse mapping of indices and movie titles
-indices = pd.Series(movies_cleaned_df.index, index=movies_cleaned_df['original_title']).drop_duplicates()
+indices = pd.Series(movies_cleaned_df.index, index=movies_cleaned_df['original_title'].str.lower()).drop_duplicates()
 
 
 def generate_rec_movies(title, sig=sig):
@@ -54,8 +54,13 @@ def generate_rec_movies(title, sig=sig):
 
 # Get array of recommended movies 
 def recommendations(str):
-    movies=np.array(generate_rec_movies(str))
-    return movies
+    try :
+        movies=np.array(generate_rec_movies(str.lower()))
+        return movies
+    except :
+        # print("enter valid movie name")
+        return 0
+
 
 
 # str = input("enter movie name : ")
