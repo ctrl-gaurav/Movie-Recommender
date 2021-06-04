@@ -1,22 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
     <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}" />
-
+    
     <link rel="preconnect" href="https://fonts.gstatic.com" />
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
 
-    <title>Movi Recommender</title>
-
+    <title>Login</title>
 </head>
-
 <body>
     <nav>
         <ul>
@@ -34,23 +31,19 @@
             </li>
         </ul>
     </nav>
-    <div class="Heading"><a href="\">MOVI RECOMMENDER</a></div>
-
-    <form class="movieForm" action="\submit" method="POST">
-        <div>
-            <input type="text" name="movie_name" placeholder="Movie Name" required />
+    <div class="container">
+        <form action="/login" method="POST">
+            <label for="username">
+                <input type="text" name="username" placeholder="Username" id="username" required>
+            </label>
+            <label for="password">
+                <input type="password" name="password" placeholder="password:" id="password" required>
+            </label>
+            <input type="submit" value="Login">
+        </form>
+        <div class="msg">
+            {{msg}}
         </div>
-        <div>
-            <button type="submit">Get Recommendation</button>
-        </div>
-    </form>
-    <ul class="movies">
-        {% for movie in movies %}
-        <li>{{movie}}</li>
-        {% endfor %}
-    </ul>
-    <div class="error">{{error}}</div>
-
+    </div>
 </body>
-
 </html>

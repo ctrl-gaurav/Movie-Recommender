@@ -1,0 +1,4 @@
+Make a script to scrape all movie poster links and add it to csv file.
+Redesign home page with good background overview, and styling.
+Better login and register.
+Better dataset.
