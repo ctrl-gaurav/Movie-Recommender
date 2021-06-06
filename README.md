@@ -8,8 +8,6 @@ HTML/CSS , Javascript, Bootstrap
 Python, Flask, MysqlDB, MySqlWorkbench  
 Heroku, Gunicorn 
 ```
-<br>
-
 # To run:
 ## Ensure you have python 2.7 or above installed as well as a MySql server running
 <br>
