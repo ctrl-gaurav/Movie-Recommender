@@ -1,56 +1,101 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
-    <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}" />
-
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet" />
-
-    <title>Movi Recommender</title>
-
-</head>
-
-<body>
-    <nav>
-        <ul>
-            <li>
-                <a href="\">HOME</a>
-            </li>
-            <li>
-                <a href="\login">LOGIN</a>
-            </li>
-            <li>
-                <a href="\register">Register</a>
-            </li>
-            <li>
-                <a href="\about-use">Abouts us</a>
-            </li>
-        </ul>
-    </nav>
-    <div class="Heading"><a href="\">MOVI RECOMMENDER</a></div>
-
-    <form class="movieForm" action="\submit" method="POST">
-        <div>
-            <input type="text" name="movie_name" placeholder="Movie Name" required />
-        </div>
-        <div>
-            <button type="submit">Get Recommendation</button>
-        </div>
-    </form>
-    <ul class="movies">
-        {% for movie in movies %}
-        <li>{{movie}}</li>
-        {% endfor %}
+{%extends "base.html"%} {%block content%}
+<!-- Navbar -->
+<section class="showcase">
+  <header>
+    <h3 class="logo">Movie Recommendations</h3>
+    <ul>
+      <li>
+        <a href="\">Home</a>
+      </li>
+      <li>
+        <a href="\login">login</a>
+      </li>
+      <li>
+        <a href="\register">Register</a>
+      </li>
+      <li>
+        <a href="\about-use">About us</a>
+      </li>
     </ul>
-    <div class="error">{{error}}</div>
+    <div class="toggle"></div>
+  </header>
 
-</body>
+  <!-- NAVBAR END -->
 
-</html>
+  <!-- <video class="video" src="{{url_for('static', filename ='arnavraghavlund_Trim1.mp4')}}" muted loop autoplay></video> -->
+  <video class="video" src="https://cdn.discordapp.com/attachments/759851314028216350/856592738518433909/arnavraghavlund_Trim1.mp4" muted loop autoplay></video>
+
+  <div class="overlay"></div>
+
+  <!-- MY FORM -->
+  <!-- <div class="text">
+    <form class="theform" action="\submit" method="POST">
+      <div></div>
+      <input
+        type="text"
+        name="movie_name"
+        placeholder="  Movie Name"
+        required
+      /><br />
+      <div></div>
+      <button type="Submit">Hit me</button>
+    </form> -->
+    <!-- END OF MY FORM -->
+
+      <!-- CODEPEN -->
+      <div class="container">
+        <form action="\submit" method="POST">
+          <input type="text" name="movie_name" placeholder="Movie name" required>
+          <div class="search"></div>
+          <div class="button-div">
+          <button class="search-button rainbow rainbow-5" type="Submit">Hit me</button>
+          </div>
+        </form>
+      </div>
+      <!-- CODEPEN END -->  
+      
+  </div>
+
+  
+</section>
+
+
+<!-- SOCIAL -->
+<div class="social">
+  <ul>
+    <li>
+      <a href=""><i class="fab fa-facebook-f"></i></a>
+    </li>
+    <li>
+      <a href=""><i class="fab fa-instagram"></i></a>
+    </li>
+    <li>
+      <a href=""><i class="fab fa-twitter"></i></a>
+    </li>
+    <li>
+      <a href=""><i class="fab fa-discord"></i></a>
+    </li>
+  </ul>
+</div>
+
+<!-- RESULTS -->
+<ul class="movies">
+  {% for movie in movies %}
+  <li>{{movie}}</li>
+  {% endfor %}
+</ul>
+<div class="error">{{error}}</div>
+
+
+
+<!-- MENU -->
+<div class="menu">
+  <ul>
+    <li><a href="">Home</a></li>
+    <li><a href="">Trailers</a></li>
+    <li><a href="">Reviews</a></li>
+    <li><a href="">Team</a></li>
+  </ul>
+</div>
+
+{%endblock%}

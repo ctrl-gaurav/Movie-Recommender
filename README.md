@@ -28,4 +28,4 @@ Run the App:
     py app.py
 <br>
 
-# *Enjoy The Recommendations* 
+# *Enjoy The Recommendations* 😈
